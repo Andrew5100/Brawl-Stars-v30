@@ -5,7 +5,6 @@ from Logic.Player import Player
 from Logic.Device import Device
 from Utils.Helpers import Helpers
 from Protocol.LogicLaserMessageFactory import packets
-from Protocol.Messages.Server.LobbyInfoMessage import LobbyInfoMessage
 from Protocol.Messages.Server.LoginFailedMessage import LoginFailedMessage
 from DataBase.DBManager import DB
 def _(*args):
@@ -58,7 +57,7 @@ class ClientThread(Thread):
 
                     if self.address[0] in self.config['BannedIPs']:
                         self.player.err_code = 11
-                        LoginFailedMessage(self.client, self.player, 'Account banned!').send()
+                        LoginFailedMessage(self.client, self.player, 'Oh no! Account banned!').send()
 
                     LobbyInfoMessage(self.client, self.player, Helpers.connected_clients['ClientsCount']).send()
 
