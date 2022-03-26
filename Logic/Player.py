@@ -4,6 +4,7 @@ from Utils.Fingerprint import Fingerprint
 from Files.CsvLogic.Characters import Characters
 from Files.CsvLogic.Skins import Skins
 from Files.CsvLogic.Cards import Cards
+from Files.CsvLogic.Emotes import Emotes
 
 class Player:
     try:
@@ -62,6 +63,8 @@ class Player:
     db = None
 
     battle_tick = 0
+
+    emotes_id = Emotes().get_emotes_id()
 
     unlocked_skins = skins_id
 

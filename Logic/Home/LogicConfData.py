@@ -51,3 +51,12 @@ class LogicConfData:
             self.writeVInt(0)
             self.writeVInt(0)
             self.writeVInt(0)
+
+
+        self.writeVInt(0)
+        for x in range(0):
+            self.writeVInt(0)
+            self.writeVInt(0)
+            for x in range(3):
+                self.writeInt(0)
+                self.writeStringReference('')

@@ -67,8 +67,8 @@ class LogicShopData:
             self.writeString()
             self.writeVInt(0)
             self.writeUInt8(0)
-            # self.writeVInt(2)
-            # self.writeVInt(0)
+            self.writeVInt(2)
+            self.writeVInt(0)
 
 
 

@@ -16,7 +16,7 @@ class LogicEventData:
             self.writeVInt(events.index(event) + 1)
             self.writeVInt(events.index(event) + 1)
             self.writeVInt(event['Ended'])
-            self.writeVInt(event['Timer'])
+            self.writeVInt(99999)  # Timer
 
             self.writeVInt(0)
             self.writeDataReference(15, event['ID'])
